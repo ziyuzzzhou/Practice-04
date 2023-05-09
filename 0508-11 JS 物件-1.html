@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-11</title>
+  </head>
+  <body>
+    <script>
+      // 物件 object: 用來封裝其他資料的容器
+      // 物件.成員名稱=資料
+      // 成員非函式稱為屬性
+      // 成員為函式稱為方法
+      /*
+      let obj = new Object();
+      obj.x = 3;
+      obj.y = 4;
+      obj.show = function () {
+        console.log("hihihi");
+      };
+      console.log(obj);
+      console.log(obj.x + obj.y);
+      obj.show();
+      */
+
+      // 在物件的方法中使用this代表"物件本身"
+      let obj = new Object();
+      obj.x = 3;
+      obj.y = 4;
+      obj.show = function () {
+        console.log(this.x + this.y);
+      };
+      obj.show();
+    </script>
+  </body>
+</html>

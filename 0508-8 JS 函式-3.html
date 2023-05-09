@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-8</title>
+  </head>
+  <body>
+    <script>
+      // return: 強迫結束函式，並帶出回傳值，return一定會寫在函式裡面
+      // 回傳值的運作: 將資料從函式內部傳回呼叫函式的位置
+
+      // function add(n1, n2) {
+      //   console.log(n1 + n2);
+      //   return "hello";
+      // }
+      // let result = add(3, 4);
+      // console.log(result);
+
+      // 設計有意義的回傳值
+      function add(n1, n2) {
+        let sum = n1 + n2;
+        return sum;
+      }
+      let result = add(3, 4);
+      console.log(result);
+    </script>
+  </body>
+</html>

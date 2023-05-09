@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0509-7 follow peng</title>
+    <style>
+      span {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span onclick="change1()">關於我</span>
+      <span onclick="change2()">學經歷</span>
+    </div>
+    <hr />
+    <div id="abt">哈囉，我叫周姿妤。</div>
+    <div id="exps" style="display: none;">
+      我畢業於英文系，現在正轉職成前端開發者。
+    </div>
+
+    <script>
+      function change1() {
+        let abtDiv = document.querySelector("#abt");
+        let expsDiv = document.querySelector("#exps");
+        abtDiv.style.display = "block";
+        expsDiv.style.display = "none";
+      }
+
+      function change2() {
+        let abtDiv = document.querySelector("#abt");
+        let expsDiv = document.querySelector("#exps");
+        abtDiv.style.display = "none";
+        expsDiv.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

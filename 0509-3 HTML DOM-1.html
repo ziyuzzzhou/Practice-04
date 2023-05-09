@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0509-3</title>
+  </head>
+  <body>
+    <script>
+      // 認識內建的window物件 (html dom結構最上層)
+      console.log(window);
+
+      // 取得視窗的寬與高
+      console.log(window.innerWidth, window.innerHeight);
+
+      // 透過screen物件，取得螢幕尺寸
+      console.log(window.screen.width, window.screen.height);
+
+      // 取得網址列內容
+      console.log(window.location.href);
+
+      // 更改網址列內容 (跳轉網頁cooool~~~)
+      // window.location.href="https://tarot.withyoutube.com/";
+
+      // 認識document物件
+      // window.可省略
+
+      // 比較直覺的呈現
+      console.log(window.document);
+      // 程式化的呈現
+      console.dir(document);
+
+      // 取得網頁標題
+      console.log(document.title);
+
+      // 更改網頁標題
+      // document.title="newnewnew title!!!"
+
+      // 取得body標籤
+      console.log(document.body);
+      console.dir(document.body);
+
+      // 更改網頁主畫面的內容 (body標籤的內文)
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "Hello HTML DOM~~~";
+      console.log(document.body.innerHTML);
+    </script>
+  </body>
+</html>

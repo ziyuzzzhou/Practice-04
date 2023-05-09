@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-4</title>
+  </head>
+  <body>
+    <script>
+      // 迴圈指令
+      // break: 強迫中斷迴圈
+      let n = 0;
+      while (n <= 10) {
+        if (n == 5) {
+          break;
+        }
+        console.log(n);
+        n++;
+      }
+
+      // continue: 強迫跳到迴圈開頭，進入下一圈
+      for (let n = 0; n <= 10; n++) {
+        if (n == 5) {
+          continue;
+        }
+        console.log(n);
+      }
+    </script>
+  </body>
+</html>

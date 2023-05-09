@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0509-4</title>
+  </head>
+  <body>
+    <!-- 一 -->
+    <div id="content">這是一段文字</div>
+
+    <!-- 二 -->
+    <div id="test">oldoldold</div>
+    <!-- 呼叫JS函式change() -->
+    <button onclick="change()">請點擊</button>
+
+    <script>
+      // 一
+      let divElement = document.querySelector("#content");
+      divElement.innerHTML = "這是新的字";
+      divElement.className = "welcome";
+      divElement.style.fontSize = "30px";
+      divElement.style.color = "#aaf";
+
+      // 二
+      function change() {
+        let divElm = document.querySelector("#test");
+        divElm.innerHTML = "newnewnew~~~";
+        divElm.style.fontSize = "50px";
+        divElm.style.color = "#afa";
+      }
+    </script>
+  </body>
+</html>

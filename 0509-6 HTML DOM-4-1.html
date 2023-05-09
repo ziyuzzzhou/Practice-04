@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0509-6 my practice</title>
+    <style>
+      .txt1 {
+        border: 5px solid #ffa;
+        color: #fff;
+      }
+      .txt2 {
+        border: 5px solid #aaf;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span onclick="change1()">關於我</span>
+      <span onclick="change2()">學經歷</span>
+    </div>
+    <hr />
+    <div id="content"></div>
+
+    <script>
+      function change1() {
+        let ele = document.querySelector("#content");
+        ele.innerHTML = "哈囉，我叫周姿妤。";
+        ele.className = "txt1";
+        ele.style.backgroundColor = "#aaf";
+
+        let title1 = document.getElementsByTagName("span")[0];
+        title1.style.border = "5px solid #faa";
+        title1.style.backgroundColor = "#afa";
+
+        let title2 = document.getElementsByTagName("span")[1];
+        title2.style.border = "none";
+        title2.style.backgroundColor = "#fff";
+      }
+
+      function change2() {
+        let ele = document.querySelector("#content");
+        ele.innerHTML = "我畢業於英文系，現在正轉職成前端開發者。";
+        ele.className = "txt2";
+        ele.style.backgroundColor = "#ffa";
+
+        let title1 = document.getElementsByTagName("span")[0];
+        title1.style.border = "none";
+        title1.style.backgroundColor = "#fff";
+
+        let title2 = document.getElementsByTagName("span")[1];
+        title2.style.border = "5px solid #afa";
+        title2.style.backgroundColor = "#faa";
+      }
+    </script>
+  </body>
+</html>

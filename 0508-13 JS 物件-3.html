@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-13</title>
+  </head>
+  <body>
+    <script>
+      // 建立物件
+      let girl = new Object(); // 建立空白物件 new Object()
+      girl.age = 18; // 物件.成員名稱=資料
+      girl.name = "Rora";
+      girl.talk = function () {
+        console.log("hihihi");
+      };
+      // 物件的方法中使用this代表物件本身
+      girl.intro = function () {
+        console.log("哈囉我是", this.name, "我今年", this.age, "歲");
+      };
+
+      // 使用物件
+      console.log(girl);
+      console.log(girl.age > 20); // 不能只寫girl，因為要做更細節的事所以要取得物件底下的資料
+      girl.talk(); // 呼叫函式；呼叫物件的方法
+      girl.intro();
+    </script>
+  </body>
+</html>

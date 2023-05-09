@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-14</title>
+  </head>
+  <body>
+    <script>
+      // 使用JSON語法建立物件
+      // {成員名稱:資料,成員名稱:資料,成員名稱:資料...}
+      let boy = {}; // 空白物件
+      let girl = {
+        age: 25,
+        name: "Ruka",
+        intro: function () {
+          console.log("你好我叫", this.name, "今年", this.age, "歲");
+        },
+      };
+
+      // 使用物件
+      console.log(boy);
+      console.log(girl.age > 40); // 物件.成員名稱
+      girl.intro(); // 呼叫"物件"的"方法(函式)"
+    </script>
+  </body>
+</html>

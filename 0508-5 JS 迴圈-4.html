@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-5</title>
+  </head>
+  <body>
+    <script>
+      for (n = 0; n < 5; n++) {
+        console.log("test"); // 會印5次
+        continue; // 強迫跳到迴圈開頭，進入下一圈
+        // 下面被忽略，永不執行
+        console.log(n);
+      }
+
+      // %取餘數，如果n為偶數就不印出
+      for (let n = 0; n < 10; n++) {
+        if (n % 2 == 0) {
+          continue;
+        }
+        console.log(n);
+      }
+    </script>
+  </body>
+</html>

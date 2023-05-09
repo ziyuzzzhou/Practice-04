@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0509-5</title>
+    <style>
+      .txt {
+        font-weight: 900;
+        color: rosybrown;
+        background-color: #afa;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>HTML DOM 畫面操作</h3>
+    <div id="content">練習網頁畫面操作</div>
+    <!-- onclick="change()" 不一定要寫在button裡，也可寫在div -->
+    <button onclick="change()">點我</button>
+
+    <script>
+      // console.log(document.body);
+      // body內文整個被修改，取代原來body內文
+      // document.body.innerHTML="newnewnewnew!!!";
+
+      // function change() {
+      //   document.body.innerHTML = "newnewnewnew!!!";
+      // }
+
+      function change() {
+        // 取得標籤物件
+        let divElm = document.querySelector("#content");
+        // console.log(divElm);
+
+        // 操作標籤物件
+        divElm.innerHTML = "newnewnewnew!!!";
+        // 加上class，就會套用相應css設定
+        divElm.className = "txt";
+        // 可直接修改css
+        divElm.style.fontSize = "50px";
+        // divElm.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

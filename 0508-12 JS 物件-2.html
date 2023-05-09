@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0508-12</title>
+  </head>
+  <body>
+    <script>
+      // JSON=JS物件表示法
+      // 不須建立new Object()，直接打大括號
+      // {成員名稱:資料,成員名稱:資料,成員名稱:資料...}
+      let obj1 = {};
+      let obj2 = {
+        x: 3,
+        y: 4,
+        show: function () {
+          console.log(this.x, this.y);
+        },
+      };
+      obj2.show();
+      // console.log(obj2);
+    </script>
+  </body>
+</html>
