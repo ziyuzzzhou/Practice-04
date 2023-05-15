@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0515-5</title>
+  </head>
+  <body>
+    <script>
+      // 物件解構賦值
+      let obj = { x: 3, y: 4, z: 50 };
+
+      // 原始寫法 let { x, y, z } = obj;
+
+      // 使用新變數名稱
+      let newX, newY, newZ;
+      ({ x: newX, y: newY, z: newZ = 5 } = obj);
+      console.log(newX, newY, newZ);
+    </script>
+  </body>
+</html>

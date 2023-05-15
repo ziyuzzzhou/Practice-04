@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0515-6</title>
+  </head>
+  <body>
+    <script>
+      // 物件解構賦值運用
+      // 統整函式的物件參數
+
+      // 原始函式
+      // function add(n1, n2) {
+      //   console.log(n1 + n2);
+      // }
+      // add(3, 4);
+
+      // 用物件當作函式參數
+      // function add(args) {
+      //   console.log(args.n1 + args.n2);
+      // }
+      // add({ n1: 3, n2: 4 });
+
+      // 更簡化
+      function add({ n1, n2 }) {
+        console.log(n1 + n2);
+      }
+      add({ n1: 3, n2: 40 });
+
+      // 箭頭函式
+      // let add = (n1, n2) => n1 + n2;
+      // let ans = add(3, 4);
+      // console.log(ans);
+
+      // let add = (args) => args.n1 + args.n2;
+      // let ans = add({ n1: 3, n2: 4 });
+      // console.log(ans);
+    </script>
+  </body>
+</html>

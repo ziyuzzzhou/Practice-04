@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0515-4</title>
+  </head>
+  <body>
+    <script>
+      // 物件解構賦值
+      // 物件用成員名稱做對應
+      let obj = { x: 3, y: 4, z: 50 };
+
+      // let x = obj.x;
+      // let y = obj.y;
+      // console.log(x, y);
+
+      // let { x, y } = obj;
+      // console.log(x, y);
+
+      // 解構與賦值兩個動作分開寫
+      let x, y, z;
+      // 外面須加上小括號()!!!!!!!!
+      // z沒給資料印出來會是undefined
+      // z可設預設值，沒資料時才會顯示預設值
+      ({ x, y, z = 5 } = obj);
+      console.log(x, y, z);
+    </script>
+  </body>
+</html>

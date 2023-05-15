@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0512-1</title>
+  </head>
+  <style>
+    .btn {
+      background-color: #aaf;
+      border-radius: 5px;
+      padding: 8px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <h3>事件處理的練習</h3>
+    <!-- <button
+      onclick="console.log('點擊事件');"
+      onmouseover="console.log('滑鼠移入');"
+      onmouseout="console.log('滑鼠移出');"
+      onmousedown="console.log('滑鼠按住');"
+      onmouseup="console.log('滑鼠放開');"
+    >
+      點我
+    </button> -->
+    <span
+      class="btn"
+      onmouseover="over(this);"
+      onmouseout="out(this);"
+      onmousedown="down(this);"
+      onmouseup="up(this);"
+      >點我</span
+    >
+    <script>
+      function over(elem) {
+        elem.style.backgroundColor = "#afa";
+      }
+      function out(elem) {
+        elem.style.backgroundColor = "#aaf";
+      }
+      function down(elem) {
+        elem.style.fontWeight = "bold";
+      }
+      function up(elem) {
+        elem.style.fontWeight = "normal";
+      }
+    </script>
+  </body>
+</html>

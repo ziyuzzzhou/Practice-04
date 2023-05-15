@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0515-7</title>
+  </head>
+  <body>
+    <script>
+      // 其餘運算符號: ...，只能放在最後面!!!
+
+      // 運用在解構賦值
+
+      // 陣列解構賦值
+      // 其餘包成一個小陣列放入 data 中
+      let [n1, n2, ...data] = [3, 2, 1, 5, 7, 8, 8, 9];
+      console.log(n1, n2, data);
+
+      // 物件解構賦值
+      let { x, y, ...hihihi } = { x: 3, y: 4, z: 5, a: 7, b: 8 };
+      console.log(x, y, hihihi);
+
+      let { f, g, ...obj } = { e: 3, f: 4, g: 5, h: 7, i: 8 };
+      console.log(f, g, obj);
+
+      // 運用在函式參數
+      // 其餘參數 rest parameter
+      function add(n3, n4, ...args) {
+        // console.log(n3, n4, args);
+        let total = n3 + n4;
+        for (let i = 0; i < args.length; i++) {
+          total = total + args[i];
+        }
+        console.log(total);
+      }
+      add(5, 6);
+      add(7, 8, 1, 2); // 18
+      add(7, 8, 1, 2, 3, 4); // 25
+    </script>
+  </body>
+</html>

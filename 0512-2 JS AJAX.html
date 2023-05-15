@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0512-2</title>
+  </head>
+  <body>
+    <h3>AJAX/XHR 網路連線實務</h3>
+    <button onclick="getData();">連線取得資料</button>
+    <div id="result"></div>
+
+    <script>
+      // 此程式可連線到遠端網址，並取得伺服器回應，然後用json格式解讀。這就是ajax，利用JS做網路連線並取得資料
+      function getData() {
+        // 利用fetch進行連線並取得資料
+        fetch(
+          "https://cwpeng.github.io/live-records-samples/data/products.json"
+        )
+          .then(function (response) {
+            // console.log(response);
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data);
+
+            // 已經取得資料，把資料呈現到畫面上
+            let result = document.querySelector("#result");
+
+            // 先把畫面清空，不會每按一次button就出現一次資料
+            result.innerHTML = "";
+
+            for (let i = 0; i < data.length; i++) {
+              let product = data[i];
+              console.log(product);
+              // console.log(product.name);
+              // console.log(product.price);
+
+              // 只寫=會覆蓋，寫+=才會把每一次印出結果都串接在後面
+              result.innerHTML +=
+                "<div>" +
+                product.name +
+                "," +
+                product.price +
+                "," +
+                product.description +
+                "</div>";
+            }
+          });
+      }
+    </script>
+  </body>
+</html>

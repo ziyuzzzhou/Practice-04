@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0515-2</title>
+  </head>
+  <body>
+    <script>
+      // 陣列解構賦值
+      // 陣列用順序做對應
+      let arr = [3, 4, 5, 100];
+
+      /*
+      let d1 = arr[0];
+      let d2 = arr[1];
+      let d3 = arr[2];
+      console.log(d1, d2, d3, d4);
+      */
+
+      // let [d1, d2, d3] = arr;
+      // console.log(d1, d2, d3, d4);
+
+      // 解構跟賦值兩個動作分開
+      let d1, d2, d3, d4;
+      // d4沒給資料印出來會是undefined
+      // d4可設預設值，沒資料時才會顯示預設值
+      [d1, d2, d3, d4 = 10] = arr;
+      console.log(d1, d2, d3, d4);
+    </script>
+  </body>
+</html>
