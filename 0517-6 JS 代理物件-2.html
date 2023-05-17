@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0517-6</title>
+  </head>
+  <body>
+    <script>
+      // 建立代理物件
+      let data = {
+        price: 100,
+        count: 5,
+        // total總價不會寫在這，因為它會隨著count改變
+      };
+
+      // 以下這行程式可印出總價，但寫起來有點麻煩
+      // console.log(data.price * data.count);
+
+      // 使用proxy輕鬆取得屬性組合之後的結果
+
+      // 第一參數為代理的目標物件，此為data
+      // 第二參數為處理函式的物件，此用json寫
+      let proxy = new Proxy(data, {
+        // get: 使用代理物件取得屬性資料時，會對應的函式
+        // 第一參數為代理對象，前面傳遞進來的代理對象(data)，此為target
+        // 第二參數為想取得的屬性名稱，此為property
+        get: function (target, property) {
+          console.log("代理的目標物件", target);
+          console.log("想要取得的屬性名稱", property);
+          return "屬性對應的資料";
+        },
+      });
+
+      // 使用代理物件，取得物件的屬性資料
+      console.log(proxy.abc); // 呼叫get函式
+    </script>
+  </body>
+</html>

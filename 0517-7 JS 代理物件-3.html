@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0517-7</title>
+  </head>
+  <body>
+    <script>
+      let data = {
+        price: 100,
+        count: 5,
+      };
+
+      // 只可印出總價
+      // let proxy = new Proxy(data, {
+      //   get: function (target, property) {
+      //     return target.price * target.count;
+      //   },
+      // });
+      // console.log(proxy.total);
+
+      let proxy = new Proxy(data, {
+        get: function (target, property) {
+          if (property === "total") {
+            return target.price * target.count;
+          } else {
+            //除了total以外的屬性，就按照原來的目標物件做回應
+            return target[property];
+          }
+        },
+      });
+      console.log("單價:", proxy.price);
+      console.log("數量:", proxy.count);
+      console.log("總價:", proxy.total);
+    </script>
+  </body>
+</html>

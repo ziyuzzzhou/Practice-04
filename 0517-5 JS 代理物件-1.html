@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0517-5</title>
+  </head>
+  <body>
+    <script>
+      let profile = {
+        firstName: "小明",
+        lastName: "王",
+      };
+      let proxy = new Proxy(profile, {
+        get: function (target, property) {
+          if (property === "chineseName") {
+            return target.lastName + target.firstName;
+          } else {
+            return target[property];
+          }
+        },
+      });
+      console.log(proxy.chineseName); // 印出王小明
+      console.log(proxy.firstName); // 印出小明
+    </script>
+  </body>
+</html>
